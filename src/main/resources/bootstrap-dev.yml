@@ -1,0 +1,28 @@
+spring:
+  cloud:
+  rabbitmq:
+    host: hewenhao.work
+    port: 5672
+    username: admin
+    password: admin
+logging:
+  level:
+    root: info
+  file: log/${spring.application.name}.log
+eureka:
+  instance:
+    status-page-url-path: /swagger-ui.html
+    ## 指定此实例的IP，不绑IP默认用本机局域网IP
+    #ip-address: 139.196.88.15wa
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+    appname: ${spring.application.name}
+    ## 每间隔10s，向服务端发送一次心跳，证明自己依然“存活”
+    lease-renewal-interval-in-seconds: 10
+    ## 告诉服务端，如果我15s之内没有给你发心跳，就代表我“死”了，将我踢出掉。
+    lease-expiration-duration-in-seconds: 15
+  client:
+    ## 设置拉取服务注册信息时间，默认60s
+    registry-fetch-interval-seconds: 20
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka
