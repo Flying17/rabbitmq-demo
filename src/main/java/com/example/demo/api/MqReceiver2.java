@@ -23,28 +23,62 @@ public class MqReceiver2 {
      *
      * @param message message
      */
-    @RabbitListener(bindings = @QueueBinding(
-            value = @Queue("computerOrder"),
-            exchange = @Exchange(value="myOrder",type=ExchangeTypes.TOPIC),
-            key = "computer"  // 指定路由的key
-    ))
+	/* @RabbitListener(bindings = @QueueBinding(
+	            exchange = @Exchange("myOrder"),
+	            key = "b",
+	            value = @Queue("b")
+	    ))
     public void processComputer(String message) {
-        log.info("computer message : {}", message);
-    }
+        log.info("bbbb message : {}", message);
+    }*/
     
+	 
+	 /**
+	     * 数码供应商服务 - 接收消息
+	     *
+	     * @param message message
+	     */
+	    @RabbitListener(bindings = @QueueBinding(
+	            value = @Queue("hhhh"),
+	            exchange = @Exchange(value="ggg"),
+	            key = "hh"  // 指定路由的key
+	    ))
+	    public void processComputer(String message) {
+	        log.info("hhh message : {}", message);
+	    }
+	    
 
-    /**
-     * 数码供应商服务 - 接收消息
-     *
-     * @param message message
-     */
-    @RabbitListener(bindings = @QueueBinding(
-            value = @Queue("a"),
-            exchange = @Exchange(value="myOrder",type=ExchangeTypes.TOPIC),
-            key = "a"  // 指定路由的key
-    ))
-    public void a(String message) {
-        log.info("aaaa message : {}", message);
-    }
+	    /**
+	     * 数码供应商服务 - 接收消息
+	     *
+	     * @param message message
+	     */
+	    @RabbitListener(bindings = @QueueBinding(
+	            value = @Queue("gggggg"),
+	            exchange = @Exchange(value="ggg"),
+	            key = "gg"  // 指定路由的key
+	    ))
+	    public void a(String message) {
+	        log.info("ggggg message : {}", message);
+	    }
+
+	    @RabbitListener(bindings = @QueueBinding(
+	            value = @Queue("sss"),
+	            exchange = @Exchange(value="kkk",type=ExchangeTypes.TOPIC),
+	            key = "qq12.*"  // 指定路由的key
+	    ))
+	    public void processFruit3(String message) {
+	        log.info("ggg333 message : {}", message);
+	    }
+	    
+
+	    @RabbitListener(bindings = @QueueBinding(
+	            value = @Queue("kkk"),
+	            exchange = @Exchange(value="kkk",type=ExchangeTypes.TOPIC),
+	            key = "qq12.123"  // 指定路由的key
+	    ))
+	    public void processFruit4(String message) {
+	        log.info("qqq message : {}", message);
+	    }
 
 }

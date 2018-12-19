@@ -1,12 +1,12 @@
 package com.example.demo.api;
-import lombok.extern.slf4j.Slf4j;
-
 import org.springframework.amqp.core.ExchangeTypes;
 import org.springframework.amqp.rabbit.annotation.Exchange;
 import org.springframework.amqp.rabbit.annotation.Queue;
 import org.springframework.amqp.rabbit.annotation.QueueBinding;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @program: sell_order
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
  * @create: 2018-08-21 22:24
  **/
 @Slf4j
-@Component
+//@Component
 public class MqReceiver {
 
     /**
@@ -23,12 +23,33 @@ public class MqReceiver {
      *
      * @param message message
      */
+
     @RabbitListener(bindings = @QueueBinding(
-            value = @Queue("computerOrder"),
-            exchange = @Exchange(value="myOrder",type=ExchangeTypes.DIRECT),
-            key = "fruit"  // 指定路由的key
+            value = @Queue("gggggg"),
+            exchange = @Exchange(value="ggg"),
+            key = "gg2"  // 指定路由的key
     ))
     public void processFruit(String message) {
-        log.info("fruit message : {}", message);
+        log.info("ggg222 message : {}", message);
+    }
+    
+
+    @RabbitListener(bindings = @QueueBinding(
+            value = @Queue("kkk"),
+            exchange = @Exchange(value="kkk",type=ExchangeTypes.TOPIC),
+            key = "qq1.*"  // 指定路由的key
+    ))
+    public void processFruit3(String message) {
+        log.info("ggg333 message : {}", message);
+    }
+    
+
+    @RabbitListener(bindings = @QueueBinding(
+            value = @Queue("kkk"),
+            exchange = @Exchange(value="kkk",type=ExchangeTypes.TOPIC),
+            key = "qq.12"  // 指定路由的key
+    ))
+    public void processFruit4(String message) {
+        log.info("qqq message : {}", message);
     }
 }

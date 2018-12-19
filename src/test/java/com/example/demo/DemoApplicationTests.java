@@ -25,7 +25,7 @@ public class DemoApplicationTests {
 	    public void sendOrder() {
 	        for (int i = 0; i < 100; i++) {
 	            // 第一个参数指定队列，第二个参数来指定路由的key，第三个参数指定消息
-	            amqpTemplate.convertAndSend("myOrder", "computer", "第" + i + "条消息");
+	            amqpTemplate.convertAndSend("kkk","qq12.12", "第" + i + "条消息");
 	        }
 	    }
 }
