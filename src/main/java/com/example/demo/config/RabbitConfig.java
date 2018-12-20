@@ -1,4 +1,4 @@
-package com.example.demo.config;
+/*package com.example.demo.config;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
@@ -11,4 +11,4 @@ public class RabbitConfig {
     public Queue helloQueue() {
         return new Queue("pikachu");
     }
-}
+}*/

@@ -1,4 +1,4 @@
-package com.example.demo.api;
+/*package com.example.demo.api;
 import org.springframework.amqp.core.ExchangeTypes;
 import org.springframework.amqp.rabbit.annotation.Exchange;
 import org.springframework.amqp.rabbit.annotation.Queue;
@@ -8,21 +8,21 @@ import org.springframework.stereotype.Component;
 
 import lombok.extern.slf4j.Slf4j;
 
-/**
+*//**
  * @program: sell_order
  * @description: 接收消息，即消费者
  * @author: 01
  * @create: 2018-08-21 22:24
- **/
+ **//*
 @Slf4j
 //@Component
 public class MqReceiver {
 
-    /**
+    *//**
      * 水果供应商服务 - 接收消息
      *
      * @param message message
-     */
+     *//*
 
     @RabbitListener(bindings = @QueueBinding(
             value = @Queue("gggggg"),
@@ -52,4 +52,4 @@ public class MqReceiver {
     public void processFruit4(String message) {
         log.info("qqq message : {}", message);
     }
-}
+}*/

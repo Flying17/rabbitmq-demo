@@ -1,4 +1,4 @@
-package com.example.demo;
+/*package com.example.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,13 +11,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class DemoApplicationTests {
 
-	/*@Autowired
+	@Autowired
     private Sender sender;
 
     @Test
     public void contextLoads() {
         sender.send();
-    }*/
+    }
 	 @Autowired
 	    private AmqpTemplate amqpTemplate;
 
@@ -30,3 +30,4 @@ public class DemoApplicationTests {
 	    }
 }
 
+*/

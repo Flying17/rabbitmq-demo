@@ -1,4 +1,4 @@
-package com.example.demo.api;
+/*package com.example.demo.api;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.amqp.core.ExchangeTypes;
@@ -8,36 +8,36 @@ import org.springframework.amqp.rabbit.annotation.QueueBinding;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-/**
+*//**
  * @program: sell_order
  * @description: 接收消息，即消费者
  * @author: 01
  * @create: 2018-08-21 22:24
- **/
+ **//*
 @Slf4j
 @Component
 public class MqReceiver2 {
 
-    /**
+    *//**
      * 数码供应商服务 - 接收消息
      *
      * @param message message
-     */
-	/* @RabbitListener(bindings = @QueueBinding(
+     *//*
+	 @RabbitListener(bindings = @QueueBinding(
 	            exchange = @Exchange("myOrder"),
 	            key = "b",
 	            value = @Queue("b")
 	    ))
     public void processComputer(String message) {
         log.info("bbbb message : {}", message);
-    }*/
+    }
     
 	 
-	 /**
+	 *//**
 	     * 数码供应商服务 - 接收消息
 	     *
 	     * @param message message
-	     */
+	     *//*
 	    @RabbitListener(bindings = @QueueBinding(
 	            value = @Queue("hhhh"),
 	            exchange = @Exchange(value="ggg"),
@@ -48,11 +48,11 @@ public class MqReceiver2 {
 	    }
 	    
 
-	    /**
+	    *//**
 	     * 数码供应商服务 - 接收消息
 	     *
 	     * @param message message
-	     */
+	     *//*
 	    @RabbitListener(bindings = @QueueBinding(
 	            value = @Queue("gggggg"),
 	            exchange = @Exchange(value="ggg"),
@@ -81,4 +81,4 @@ public class MqReceiver2 {
 	        log.info("qqq message : {}", message);
 	    }
 
-}
+}*/

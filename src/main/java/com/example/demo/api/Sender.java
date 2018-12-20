@@ -1,4 +1,4 @@
-package com.example.demo.api;
+/*package com.example.demo.api;
 
 
 import java.util.Date;
@@ -18,4 +18,4 @@ public class Sender {
         rabbitTemplate.convertAndSend("pikachu_e","a","send content :"+msg+"111");
         rabbitTemplate.convertAndSend("pikachu_e","b","send content :"+msg+"222");
     }
-}
+}*/
